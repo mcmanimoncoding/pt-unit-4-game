@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./game.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- jumbotron -->
+        <div class="jumbotron" style="background-color: #efef">
+            <h2 class="text-center text-info">Crystals and Stuff</h2>
+        </div>
+
+        <div class="row">
+            <!-- instructions -->
+            <div class="card col-md-6" style="border:none">
+                <div class="card-body" style="background-color: #efef;">
+                    <h4 class="card-title text-center col-md">Instructions
+                        <hr>
+                    </h4>
+                    <p class="card-text">Test the crystals to see their value! <br> Try to match the target, if you
+                        can!</p>
+                    <button type="button" class="btn btn-danger">Begin!</button>
+                </div>
+            </div>
+            <!-- Your Total -->
+            <div class="card col-md-3" style="background-color: #efef; border:none">
+                <div class="card-body">
+                    <h4 class="card-title text-center">
+                        Your Total
+                        <hr>
+                    </h4>
+                    <h4 class="card-text text-center" id="your-total-display"></h4>
+                </div>
+            </div>
+
+            <!-- Target -->
+
+            <div class="card col-md-3" style="background-color: #efef; border:none">
+                <div class="card-body">
+                    <h4 class="card-title text-center">
+                        Target
+                        <hr>
+                    </h4>
+                    <h4 class="card-text text-center" id="target-display"></h4>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+
+            <div class="card col-md-3" style="background-color: burlywood; border:none;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        Losses<hr>
+                    </h5>
+                    <h4 class="card-text text-center" id="losses-display"></h4>
+                </div>
+            </div>
+            <div class="card col-md-3" style="background-color: burlywood; border:none;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        Wins<hr>
+                    </h5>
+                    <h4 class="card-text text-center" id="wins-display"></h4>
+                </div>
+            </div>
+            <div class="card col-md-6" style="background-color: burlywood; border:none;">
+                <div class="card-body">
+                    <h5 class="card-text text-center" id="crystal-holder">
+                        Crystals <hr>
+                    </h5>
+
+                    <div class="content-wrapper"> <span id="crystal-holder">
+                        <img src="assets/img/iconfinder_Amethyst_127306.png" alt="Amethyst" class="col-sm-3">
+                        <img src="assets/img/iconfinder_Aquamarine_127303.png" alt="Aquamarine" class="col-sm-3">
+                        <img src="assets/img/iconfinder_Emerald_127302.png" alt="Emerald" class="col-sm-3">
+                        <img src="assets/img/iconfinder_Gemstone_127301.png" alt="Gemstone" class="col-sm-3">
+                    </span>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
