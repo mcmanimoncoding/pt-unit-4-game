@@ -24,8 +24,17 @@ $(document).ready(function () {
     $("#wins-display").text(wins);
     $("#losses-display").text(losses);
 
-
+    
     };
+
+    $("#btn-start").on("click", function(){
+        generateTarget();
+        
+    });
+    function generateTarget() {
+    var target = Math.floor(Math.random()*(120-19+1)+19);
+    console.log(target);
+    $("#target-display").text(target)};
 
     startUp();
 
