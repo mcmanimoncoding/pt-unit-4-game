@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <link rel="stylesheet" href="crystals/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="crystals/game.js"></script>
@@ -23,7 +23,7 @@
 
         <div class="row">
             <!-- instructions -->
-            <div class="card col-sm-4" style="border:none; background-color: #efef;">
+            <div class="card col-sm-5 mx-1" style="border:none; background-color: #efef;">
                 <div class="card-body">
                     <h4 class="card-title text-center col-lg">Instructions
                         <hr>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <!-- Your Total -->
-            <div class="card col-sm-4" style="background-color: #efef; border:none">
+            <div class="card col-sm-3 mx-1" style="background-color: #efef; border:none">
                 <div class="card-body">
                     <h4 class="card-title text-center">
                         Your Total
@@ -46,7 +46,7 @@
 
             <!-- Target -->
 
-            <div class="card col-sm-4" style="background-color: #efef; border:none">
+            <div class="card col-sm-3 mx-1" style="background-color: #efef; border:none">
                 <div class="card-body">
                     <h4 class="card-title text-center">
                         Target
@@ -63,7 +63,8 @@
             <div class="card col-sm-3" style="background-color: burlywood; border:none;">
                 <div class="card-body">
                     <h5 class="card-title text-center">
-                        Losses<hr>
+                        Losses
+                        <hr>
                     </h5>
                     <h4 class="card-text text-center" id="losses-display"></h4>
                 </div>
@@ -71,31 +72,45 @@
             <div class="card col-sm-3" style="background-color: burlywood; border:none;">
                 <div class="card-body">
                     <h5 class="card-title text-center">
-                        Wins<hr>
+                        Wins
+                        <hr>
                     </h5>
                     <h4 class="card-text text-center" id="wins-display"></h4>
                 </div>
             </div>
-            <div class="card col-lg-6" style="background-color: burlywood; border:none;">
+            <div class="card col-sm-6" style="background-color: burlywood; border:none;">
                 <div class="card-body">
                     <h5 class="card-text text-center" id="crystal-holder">
-                        Crystals <hr>
+                        Crystals
+                        <hr>
                     </h5>
 
                     <div class="content-wrapper"> <span id="crystal-holder">
-                        <img src="crystals/assets/img/iconfinder_Amethyst_127306.png" alt="Amethyst" class="col-sm-3">
-                        <img src="crystals/assets/img/iconfinder_Aquamarine_127303.png" alt="Aquamarine" class="col-sm-3">
-                        <img src="crystals/assets/img/iconfinder_Emerald_127302.png" alt="Emerald" class="col-sm-3">
-                        <img src="crystals/assets/img/iconfinder_Gemstone_127301.png" alt="Gemstone" class="col-sm-3">
+                            <div class="crystal-img">
+                                <img src="crystals/assets/img/iconfinder_Amethyst_127306.png" alt="Amethyst" class="col-sm-3" id="cry1">
+                                <span id="crystal1">
+                                </span>
+                            </div>
+                            <div class="crystal-img">
+                                <img src="crystals/assets/img/iconfinder_Aquamarine_127303.png" alt="Aquamarine" class="col-sm-3" id="cry2">
+                            </div>
+                            <div class="crystal-img">
+
+                                <img src="crystals/assets/img/iconfinder_Emerald_127302.png" alt="Emerald" class="col-sm-3" id="cry3">
+                            </div>
+
+                            <div class="crystal-img">
+                                <img src="crystals/assets/img/iconfinder_Gemstone_127301.png" alt="Gemstone" class="col-sm-3" id="cry4">
+                        </span> </div>
                     </span>
-                    </div>
                 </div>
-
-
             </div>
 
 
         </div>
+
+
+    </div>
 
 
 
