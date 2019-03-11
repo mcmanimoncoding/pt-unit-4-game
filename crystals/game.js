@@ -5,15 +5,11 @@
 // onclick crystal will display assigned value, value will be added to var total
 
 // variables
-var targetNum = "0";
-var yourNum = "0";
+var target = 0;
+var yourNum = 0;
 var wins = 0;
 var losses = 0;
 
-// var crystal1;
-// var crystal2;
-// var crystal3;
-// var crystal4;
 
 $(document).ready(function () {
 
@@ -42,7 +38,7 @@ $(document).ready(function () {
     function startUp() {
 
         $("#your-total-display").text(yourNum);
-        $("#target-display").text(targetNum);
+        $("#target-display").text(target);
         $("#wins-display").text(wins);
         $("#losses-display").text(losses);
 
@@ -52,47 +48,67 @@ $(document).ready(function () {
     $("#btn-start").on("click", function () {
 
         generateTarget();
-        // pushCrystals();
-        // generateNum();
         crystalValue();
-        
+        // runGame();
         crystal.cry1.value = crystalValue(1, 12);
         crystal.cry2.value = crystalValue(1,12);
         crystal.cry3.value = crystalValue(1,12);
         crystal.cry4.value = crystalValue(1,12);
-        console.log(cry1.value);
+        console.log("Crystal values: ", crystal.cry1.value, crystal.cry2.value, crystal.cry3.value, crystal.cry4.value);
     });
 
     function crystalValue(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    // function pushCrystals(){
-
-       
-    // };
-        
-
     function generateTarget() {
         var target = Math.floor(Math.random() * (120 - 19 + 1) + 19);
         console.log(target);
-        $("#target-display").text(target)
+        $("#target-display").html(target)
     };
 
     
 
     $("#cry1").on("click", function () {
-        console.log("Cry1")
+        console.log("Crystal 1: "+crystal.cry1.value);
+        yourNum = parseInt(yourNum)+crystal.cry1.value;
+        $("#your-total-display").html(yourNum);
+        check();
     });
     $("#cry2").on("click", function () {
-        console.log("Cry2")
+        console.log("Crystal 2: "+crystal.cry2.value);
+        yourNum = parseInt(yourNum)+crystal.cry2.value;
+        $("#your-total-display").html(yourNum);
+        check();
     });
     $("#cry3").on("click", function () {
-        console.log("Cry3")
+        console.log("Crystal 3: "+crystal.cry3.value)
+        yourNum = parseInt(yourNum)+crystal.cry3.value;
+        $("#your-total-display").html(yourNum);
+        check();
     });
     $("#cry4").on("click", function () {
-        console.log("Cry4")
+        console.log("Crystal 4: "+crystal.cry4.value)
+        yourNum = parseInt(yourNum)+crystal.cry4.value;
+        $("#your-total-display").html(yourNum);
+        check();
     });
+
+    // checks if loss or win 
+    function check() {
+        // if yourNum is larger than target
+        if(yourNum > target){
+            console.log("You Lose");
+            losses++;
+            $("#losses-display").text(losses);
+
+        }
+        else if(yourNum==target){
+            console.log("You Win!");
+            wins++;
+            $("#wins-display").text(wins);
+        }
+    }
 
 
     startUp();
