@@ -57,17 +57,18 @@ $(document).ready(function () {
         console.log("Crystal values: ", crystal.cry1.value, crystal.cry2.value, crystal.cry3.value, crystal.cry4.value);
     });
 
+
     function crystalValue(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
     function generateTarget() {
-        var target = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+        target = Math.floor(Math.random() * (120 - 19 + 1) + 19);
         console.log(target);
         $("#target-display").html(target)
     };
 
-    
+    // on click functions that push crystal value to yourNum and
 
     $("#cry1").on("click", function () {
         console.log("Crystal 1: "+crystal.cry1.value);
@@ -99,14 +100,19 @@ $(document).ready(function () {
         // if yourNum is larger than target
         if(yourNum > target){
             console.log("You Lose");
+            alert("You Lose!");
             losses++;
             $("#losses-display").text(losses);
 
         }
         else if(yourNum==target){
             console.log("You Win!");
+            alert("You Win!")
             wins++;
             $("#wins-display").text(wins);
+        }
+        else{
+            return check();
         }
     }
 
