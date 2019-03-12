@@ -44,18 +44,23 @@ $(document).ready(function () {
 
 
     };
-    
-    $("#btn-start").on("click", function () {
 
+    $("#btn-start").on("click", function () {
+        start();
+
+    });
+
+    function start() {
         generateTarget();
         crystalValue();
         // runGame();
         crystal.cry1.value = crystalValue(1, 12);
-        crystal.cry2.value = crystalValue(1,12);
-        crystal.cry3.value = crystalValue(1,12);
-        crystal.cry4.value = crystalValue(1,12);
+        crystal.cry2.value = crystalValue(1, 12);
+        crystal.cry3.value = crystalValue(1, 12);
+        crystal.cry4.value = crystalValue(1, 12);
         console.log("Crystal values: ", crystal.cry1.value, crystal.cry2.value, crystal.cry3.value, crystal.cry4.value);
-    });
+
+    }
 
 
     function crystalValue(min, max) {
@@ -71,26 +76,26 @@ $(document).ready(function () {
     // on click functions that push crystal value to yourNum and
 
     $("#cry1").on("click", function () {
-        console.log("Crystal 1: "+crystal.cry1.value);
-        yourNum = parseInt(yourNum)+crystal.cry1.value;
+        console.log("Crystal 1: " + crystal.cry1.value);
+        yourNum = parseInt(yourNum) + crystal.cry1.value;
         $("#your-total-display").html(yourNum);
         check();
     });
     $("#cry2").on("click", function () {
-        console.log("Crystal 2: "+crystal.cry2.value);
-        yourNum = parseInt(yourNum)+crystal.cry2.value;
+        console.log("Crystal 2: " + crystal.cry2.value);
+        yourNum = parseInt(yourNum) + crystal.cry2.value;
         $("#your-total-display").html(yourNum);
         check();
     });
     $("#cry3").on("click", function () {
-        console.log("Crystal 3: "+crystal.cry3.value)
-        yourNum = parseInt(yourNum)+crystal.cry3.value;
+        console.log("Crystal 3: " + crystal.cry3.value)
+        yourNum = parseInt(yourNum) + crystal.cry3.value;
         $("#your-total-display").html(yourNum);
         check();
     });
     $("#cry4").on("click", function () {
-        console.log("Crystal 4: "+crystal.cry4.value)
-        yourNum = parseInt(yourNum)+crystal.cry4.value;
+        console.log("Crystal 4: " + crystal.cry4.value)
+        yourNum = parseInt(yourNum) + crystal.cry4.value;
         $("#your-total-display").html(yourNum);
         check();
     });
@@ -98,21 +103,27 @@ $(document).ready(function () {
     // checks if loss or win 
     function check() {
         // if yourNum is larger than target
-        if(yourNum > target){
+        if (yourNum > target) {
             console.log("You Lose");
             alert("You Lose!");
             losses++;
             $("#losses-display").text(losses);
+            target = 0;
+            yourNum = 0;
+            startUp();
+            start();
 
-        }
-        else if(yourNum==target){
+        } else if (yourNum == target) {
             console.log("You Win!");
             alert("You Win!")
             wins++;
             $("#wins-display").text(wins);
-        }
-        else{
-            return check();
+            // target = 0;
+            startUp();
+            start();
+            yourNum = 0;
+        } else {
+            // return check();
         }
     }
 
