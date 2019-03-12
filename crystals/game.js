@@ -118,13 +118,11 @@ $(document).ready(function () {
             alert("You Win!")
             wins++;
             $("#wins-display").text(wins);
-            // target = 0;
+            target = 0;
+            yourNum = 0;
             startUp();
             start();
-            yourNum = 0;
-        } else {
-            // return check();
-        }
+        } 
     }
 
 
